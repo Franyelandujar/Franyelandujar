@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O&F Computech - Servicios</title>
+    <link rel="icon" href="ffoo.jpg">
+    <style>
+      
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #838383, #c45f00);
+        color: white;
+        text-align: center;
+      }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            color: #333;
+        }
+
+    
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffb400;
+        }
+
+        /* Estilos para el contenido */
+        .title-cards {
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .servicio {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .servicio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .servicio img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .servicio h3 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .servicio p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+    
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/ffoo.jpg" alt="Logo O&F Computech" class="logo">
+        <h1>O&F Computech</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Producto.html">Productos</a></li>
+                <li><a href="Servicio.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="title-cards">
+        <h2>Servicios Disponibles</h2>
+    </div>
+
+    <div class="container">
+        <div class="servicios">
+            <div class="servicio">
+                <img src="https://tecnicos.nuc.edu/wp-content/uploads/2022/06/Reparacio%CC%81n-Computadora_mobile_programas_450x340.jpg"
+                    alt="Reparación de Computadoras">
+                <h3>Reparación de Computadoras</h3>
+                <p>Diagnóstico y reparación de hardware y software.</p>
+            </div>
+            <div class="servicio">
+                <img src="https://sevillasistemas.com/wp-content/uploads/2023/11/Que-es-una-instalacion-de-redes.jpg"
+                    alt="Instalación de Redes">
+                <h3>Instalación de Redes</h3>
+                <p>Configuración de redes cableadas e inalámbricas.</p>
+            </div>
+            <div class="servicio">
+                <img src="https://www.maprofar.com/wp-content/uploads/2023/08/recuperacion-datos-1024x640.jpg"
+                    alt="Recuperación de Datos">
+                <h3>Recuperación de Datos</h3>
+                <p>Recuperamos información perdida de discos duros y SSD.</p>
+            </div>
+            <div class="servicio">
+                <img src="https://www.ucatalunya.edu.co/img/blog/seguridad-informatica-la-importancia-y-lo-que-debe-saber.jpg"
+                    alt="Seguridad Informática">
+                <h3>Seguridad Informática</h3>
+                <p>Protección contra virus, malware y ataques cibernéticos.</p>
+            </div>
+            <div class="servicio">
+                <img src="https://intratecno.com/wp-content/uploads/hombre-usando-laptop-con-windows-10-instalacion-de-software.webp"
+                    alt="Instalación de Software">
+                <h3>Instalación de Software</h3>
+                <p>Instalamos y configuramos software a medida.</p>
+            </div>
+            <div class="servicio">
+                <img src="https://soporteremotoesho.wordpress.com/wp-content/uploads/2014/05/soporteremoto.jpg"
+                    alt="Soporte Técnico Remoto">
+                <h3>Soporte Técnico Remoto</h3>
+                <p>Asistencia en línea para solucionar problemas técnicos.</p>
+            </div>
+        </div>
+    </div>
+
+  
+
+
+    
+</body>
+
+</html>

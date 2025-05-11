@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O&F Computech</title>
+    <link rel="icon" href="ffoo.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #333333;
+            padding: 15px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 120px;
+            border-radius: 50%; /* Logo redondo */
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff6600;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #f4f4f4;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra más fuerte para mejorar el contraste */
+            z-index: 5;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #ffd700; /* Color dorado para resaltar */
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #fff; /* Mantener el color blanco en el texto */
+        }
+
+        .cta {
+            background-color: #813400;
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cta:hover {
+            background-color: #cc5500;
+        }
+
+        .background-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("images/ffoo.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            opacity: 1; /* Súper suave */
+            z-index: -1;
+        }
+
+        .productos {
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+        }
+
+        .productos h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .productos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .producto-item {
+            background: white;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .producto-item:hover {
+            transform: scale(1.05);
+        }
+
+        .producto-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .producto-item:hover img {
+            transform: translateY(-10px);
+        }
+
+        .producto-item h3 {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .producto-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .producto-precio {
+            font-weight: bold;
+            color: #813400;
+        }
+
+        .informaciones {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+
+        .informaciones h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .info-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .info-card {
+            background-color: #fafafa;
+            width: 300px;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        .info-card h3 {
+            color: #ff6600;
+            margin-bottom: 15px;
+        }
+
+        .info-card p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="background-logo"></div> <!-- Logo de fondo -->
+
+    <header>
+        <img src="images/unnamed.png" alt="Logo O&F Computech" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Producto.html">Productos</a></li>
+                <li><a href="Servicio.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <section class="hero">
+        <h2>Bienvenido a O&F Computech</h2>
+        <p>Expertos en computadoras y tecnología.</p>
+        <p>Precios en Dólares y Peso Dominicano.</p>
+        <a href="#productos" class="cta">Ver Productos</a>
+    </section>
+
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-container">
+            <div class="producto-item">
+                <img src="images/hp.jpg" alt="Computadora HP">
+                <h3>Computadora HP</h3>
+                <p>Intel Core i5, 8GB RAM, 256GB SSD</p>
+                <p class="producto-precio">RD$ 32,000</p>
+                <a href="https://www.hp.com/lamerica_nsc_cnt_amer-es/home.html" class="cta">Ver más</a>
+            </div>
+            <div class="producto-item">
+                <img src="images/mouse.jpg" alt="Mouse Gamer RGB">
+                <h3>Mouse Gamer RGB</h3>
+                <p>7 botones, retroiluminado</p>
+                <p class="producto-precio">RD$ 950</p>
+                <a href="https://www.amazon.com/rgb-mouse/s?k=rgb+mouse" class="cta">Ver más</a>
+            </div>
+            <div class="producto-item">
+                <img src="images/lg.jpg" alt="Monitor LG 24">
+                <h3>Monitor LG 24"</h3>
+                <p>Full HD, HDMI/VGA</p>
+                <p class="producto-precio">RD$ 9,800</p>
+                <a href="https://www.lg.com/es/monitores/?srsltid=AfmBOoqu6K3vULN8COklQ5plPGyzhCQPH7X7yf_sQ4q-YKsiUfJye_Mo" class="cta">Ver más</a>
+            </div>
+        </div>
+
+        <div class="productos-container">
+            <div class="producto-item">
+                <img src="images/case.jpg" alt="Case gaming">
+                <h3>Case Gaming</h3>
+                <p>Case Negro y Reforzado</p>
+                <p class="producto-precio">RD$ 20,000</p>
+                <a href="https://www.bios.do/categoria-producto/case/" class="cta">Ver más</a>
+            </div>
+            <div class="producto-item">
+                <img src="images/liquida.png" alt="Refrigeración líquida">
+                <h3>Refrigeración Líquida</h3>
+                <p>Calidad de Juego</p>
+                <p class="producto-precio">RD$ 20,000</p>
+                <a href="https://www.corsair.com/ww/es/s/hydro-x-series-custom-cooling?srsltid=AfmBOopoALc8lEwU1yNBpolVqrkCoTmQh4VI8iCj5ZSp1CjBG_IgnglV" class="cta">Ver más</a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section class="informaciones">
+        <h2>Información Importante</h2>
+        <div class="info-container">
+            <div class="info-card">
+                <h3>¿Quiénes somos?</h3>
+                <p>Somos una empresa dedicada a la venta de tecnología, comprometida con ofrecer productos de calidad y un servicio personalizado.</p>
+            </div>
+            <div class="info-card">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM<br>Domingos: Cerrado</p>
+            </div>
+            <div class="info-card">
+                <h3>Ubicación</h3>
+                <p>Calle Santa Rita #74, Santo Domingo, D.N, República Dominicana.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+
+        <footer style="background-color: #333; color: #fca311; text-align: center; padding: 10px;">
+            <p>&copy; 2025 Nombre de tu Sitio. Todos los derechos reservados.</p>
+            <p>Tel:829/273/8278</p>
+            <p>DUEÑOS:Franyel Andujar y Oscarlin Joel Ramirez</p>
+            <p>Fecha de actualizacion: 09 Mayo 2025</p>
+            <p><a href="politica-de-privacidad.html" style="color: #fca311; text-decoration: none;">Política de Privacidad</a> | 
+               <a href="terminos-y-condiciones.html" style="color: #fca311; text-decoration: none;">Términos y Condiciones</a></p>
+               
+        </footer>
+        
+    </section>
+</body>
+</html>

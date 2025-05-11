@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ffoo.jpg">
+    <title>O&F Computech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #838383, #c25e00);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333333;
+            padding: 15px;
+            color: white;
+        }
+
+        .logo {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .producto {
+            background: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            color: black;
+        }
+
+        .producto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .producto h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .producto p {
+            color: #666;
+        }
+
+        .producto .precio {
+            font-size: 20px;
+            color: #e60000;
+            font-weight: bold;
+        }
+
+        .producto button {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .producto button:hover {
+            background: #0056b3;
+        }
+
+        .carrito-icono {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fca311;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .carrito-lista {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            background: white;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 300px;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 999;
+            text-align: left;
+        }
+
+        .carrito-lista h3 {
+            margin-top: 0;
+        }
+
+        .carrito-lista ul {
+            padding-left: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fca311;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer a {
+            color: #fca311;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carrito-icono" onclick="toggleCarrito()">🛒 Carrito (<span id="contador">0</span>)</div>
+    <div class="carrito-lista" id="carritoLista">
+        <h3>Productos en el carrito</h3>
+        <ul id="listaProductos"></ul>
+    </div>
+
+    <header>
+        <img src="images/ffoo.jpg" alt="Logo O&F Computech" class="logo">
+        <h1>O&F Computech</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Producto.html">Productos</a></li>
+                <li><a href="Servicio.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Bienvenido a O&F Computech</h1>
+        <div class="productos">
+            <div class="producto">
+                <img src="https://acdn-us.mitiendanube.com/stores/001/156/703/products/notebook-gamer-asus-rog-strix-g17-g713pv-ws94-17-ryzen-9-7845hx-1tb-ssd-16gb-rtx-4060-copia-4a3f8882e47fbcca8317314309110054-1024-1024.png" alt="Laptop Gamer RTX 4060">
+                <h2>Laptop Gamer RTX 4060</h2>
+                <p>16GB RAM, 1TB SSD, Intel i7 13va Gen</p>
+                <p class="precio">$1,599.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://shopmundo.com.do/images/detailed/150/RCG0110.jpg" alt="PC de Escritorio Ryzen 9">
+                <h2>PC de Escritorio Ryzen 9</h2>
+                <p>32GB RAM, 2TB SSD, RTX 4080</p>
+                <p class="precio">$2,499.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://www.lg.com/cac/images/monitores/md07592645/gallery/D-01.jpg" alt="Monitor 4K Ultra HD">
+                <h2>Monitor 4K Ultra HD</h2>
+                <p>144Hz, 1ms, HDR</p>
+                <p class="precio">$499.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://cdn.shopify.com/s/files/1/0578/1186/1664/files/3_d8b83b3a-592a-484b-9872-a15750fd73b9_2048x2048.jpg?v=1675755683" alt="Teclado Mecánico RGB">
+                <h2>Teclado Mecánico RGB</h2>
+                <p>Switches mecánicos, retroiluminación RGB</p>
+                <p class="precio">$129.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://thermaltake-de-bhgycxg9djfgcmfn.a02.azurefd.net/media/catalog/product/cache/023a745bb14092c479b288481f91a1bd/l/2/l20m04.jpg" alt="Mouse Gamer RGB">
+                <h2>Mouse Gamer RGB</h2>
+                <p>12000 DPI, Iluminación personalizable</p>
+                <p class="precio">$79.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://portatilshoprd.com/wp-content/uploads/2024/01/gsc_125889158_4365922_1.jpg" alt="Auriculares Gaming">
+                <h2>Auriculares Gaming</h2>
+                <p>Sonido envolvente 7.1, Micrófono con cancelación de ruido</p>
+                <p class="precio">$99.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://officeseatonline.com/wp-content/uploads/2024/08/DALL%C2%B7E-2024-08-24-20.18.05-A-realistic-image-featuring-three-different-models-of-gaming-chairs-each-with-vibrant-colors-like-red-blue-and-green.-The-chairs-should-have-unique-1500x857.jpg" alt="Silla Gamer">
+                <h2>Silla Gamer</h2>
+                <p>Ergonómica, ajustable, diseño racing</p>
+                <p class="precio">$249.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://cts.com.do/wp-content/uploads/2021/08/banner2tb_800_1200-998824.jpg" alt="Disco Duro Externo 2TB">
+                <h2>Disco Duro Externo 2TB</h2>
+                <p>USB 3.0, Alta velocidad de transferencia</p>
+                <p class="precio">$89.99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://www.altasenal.com/wp-content/uploads/2023/03/15094.jpg" alt="SSD NVMe 1TB">
+                <h2>SSD NVMe 1TB</h2>
+                <p>Lectura 3500MB/s, Escritura 3000MB/s</p>
+                <p class="precio">$149.99</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </div>
+    
+ <video width="560" height="315" controls>
+    <source src="Oyf.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+</video>
+
+    <footer>
+        <p>&copy; 2025 O&F Computech. Todos los derechos reservados.</p>
+        <p>Tel: 829/273/8278</p>
+           <p>Dueños:Franyel Andujar y Oscarlin Joel Ramirez</p>
+        <p><a href="politica-de-privacidad.html">Política de Privacidad</a> |
+            <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+        </p>
+    </footer>
+
+
+   <!-- Reemplaza tu <script> con este nuevo bloque -->
+<script>
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    function agregarAlCarrito(nombre, precio) {
+        carrito.push({ nombre, precio });
+        guardarCarrito();
+        actualizarCarrito();
+    }
+
+    function eliminarDelCarrito(index) {
+        carrito.splice(index, 1); // Elimina el producto en esa posición
+        guardarCarrito();
+        actualizarCarrito();
+    }
+
+    function guardarCarrito() {
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+
+    function actualizarCarrito() {
+        const lista = document.getElementById("listaProductos");
+        const contador = document.getElementById("contador");
+        lista.innerHTML = "";
+
+        carrito.forEach((producto, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                ${producto.nombre} - $${producto.precio}
+                <button onclick="eliminarDelCarrito(${index})" style="margin-left: 10px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer;">❌</button>
+            `;
+            lista.appendChild(li);
+        });
+
+        contador.textContent = carrito.length;
+    }
+
+    function toggleCarrito() {
+        const carritoLista = document.getElementById("carritoLista");
+        carritoLista.style.display = carritoLista.style.display === "block" ? "none" : "block";
+    }
+
+    actualizarCarrito();
+
+    document.querySelectorAll(".producto button").forEach(boton => {
+        boton.addEventListener("click", e => {
+            e.preventDefault();
+            const producto = boton.closest(".producto");
+            const nombre = producto.querySelector("h2").textContent;
+            const precio = producto.querySelector(".precio").textContent.replace('$', '');
+            agregarAlCarrito(nombre, precio);
+        });
+    });
+</script>
+
+    </script>
+    
+</body>
+
+</html>
